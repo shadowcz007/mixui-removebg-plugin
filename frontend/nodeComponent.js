@@ -8,7 +8,7 @@ function RemoveBGNode({ data }) {
     {
       className: 'text-center text-sm text-muted-foreground mt-2'
     },
-    'PNG format output'
+    '由shadow制作的插件示例'
   );
 }
 
