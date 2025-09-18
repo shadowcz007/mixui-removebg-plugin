@@ -59,13 +59,13 @@ export async function execute(inputs, params = {}) {
     for (const dataUrl of images) {
         // Convert to Blob
         const srcBlob = dataUrlToBlob(dataUrl);
-        console.log(srcBlob)
+        
         // Run background removal
         const outBlob = await removeBackground(srcBlob);
 
         // 固定为 PNG 格式输出
         const finalDataUrl = await blobToDataUrl(outBlob);
-
+      
         results.push(finalDataUrl);
     }
 

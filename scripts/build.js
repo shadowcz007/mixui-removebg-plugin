@@ -59,13 +59,12 @@ async function buildBackgroundRemovalLib() {
 }
 
 async function buildBackend() {
-  // 将执行器与其依赖一并输出为 IIFE，依赖 runtime 通过全局 ImglyBackgroundRemoval 提供
+  // 将执行器与其依赖一并输出为 UMD 格式，支持 module.exports
   await build({
     entryPoints: [path.join(root, 'backend/executor.js')],
     outfile: path.join(distDir, 'backend.js'),
     bundle: true,
-    format: 'iife',
-    globalName: 'RemoveBGExecutor',
+    format: 'cjs', // 改为 CommonJS 格式
     platform: 'browser',
     target: ['es2020'],
     minify: true,
