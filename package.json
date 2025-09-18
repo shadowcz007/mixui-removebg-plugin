@@ -1,0 +1,19 @@
+{
+  "name": "mixui-removebg-plugin",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "clean": "rimraf dist",
+    "package": "npm run build && node scripts/package.js",
+    "dist": "npm run package"
+  },
+  "devDependencies": {
+    "esbuild": "0.23.0",
+    "rimraf": "5.0.5"
+  },
+  "dependencies": {
+    "@imgly/background-removal": "^1.7.0"
+  }
+}

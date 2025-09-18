@@ -1,0 +1,24 @@
+{
+  "$schema": "https://flowcraft.dev/schema/plugin.json",
+  "name": "removebg",
+  "id": "mixui.removebg",
+  "label": "Remove Background",
+  "version": "1.0.0",
+  "description": "Remove background from images (base64 array in, base64 array out)",
+  "author": "Mixlab Team",
+  "license": "MIT",
+  "type": "node",
+  "category": "Image",
+  "keywords": ["image", "background", "removebg", "segmentation"],
+  "icon": "icon.svg",
+  "frontend": {
+    "entry": "frontend.js"
+  },
+  "backend": {
+    "entry": "backend.js",
+    "runtime": "node"
+  },
+  "schema": "schema.json",
+  "inputs": ["image_base64"],
+  "outputs": ["image_base64"]
+}
